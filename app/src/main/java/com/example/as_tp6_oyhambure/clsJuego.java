@@ -52,7 +52,6 @@ public class clsJuego {
         public capaJuego(){
            // ponerJugador();
             ponerFondo();
-            ponertitulo();
            // ponerenemigo();
             super.schedule("ponerenemigo", 3.0f);
         }
@@ -68,28 +67,8 @@ public class clsJuego {
             super.addChild(imagenfondo,-10);
         }
 
-        void ponerJugador(){
-            _Jugador=Sprite.sprite("avion.png");
-            float posicionX, posicionY;
-            posicionX = _Pantalla.getWidth()/2;
-            posicionY = _Pantalla.getHeight()/2;
-            _Jugador.setPosition(posicionX,120);
-            super.addChild(_Jugador,10);
-        }
-
-        void ponertitulo(){
-            _TituloJuego=Label.label("Super Juegazo","Verdana",70);
-
-            _TituloJuego.setPosition(_Pantalla.getWidth()/2, _Pantalla.getHeight() - _TituloJuego.getHeight()/2);
-
-            CCColor3B colortitulo;
-            colortitulo = new CCColor3B(128,255,255);
-            _TituloJuego.setColor(colortitulo);
-            super.addChild(_TituloJuego, -5);
-        }
-
         public void ponerenemigo(float diferenciadetiempo){
-            _Enemigo=Sprite.sprite("epoch.gif");
+            _Enemigo=Sprite.sprite("avion.gif");
             CCPoint posicionInicial;
             float alturaenemigo;
             alturaenemigo = _Enemigo.getHeight();
